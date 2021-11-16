@@ -10,6 +10,7 @@ import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -24,13 +25,11 @@ import java.util.List;
 public class PatientsActivity extends AppCompatActivity {
     private Intent intent;
 
-    private Assignment04Database database;
-    private PatientDao patientDao;
-    private Button addButton;
     private RecyclerView myRecyclerView;
-    private LiveData<List<Patient>> allPatientsLive;
     private PatientViewModel patientViewModel;
     private PatientAdapter patientAdapter;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,9 +53,23 @@ public class PatientsActivity extends AppCompatActivity {
             }
         });
 
+        patientAdapter.setOnItemClick(new PatientAdapter.OnItemClickListener(){
+            public void onItemClick(View v, int position, String id){
+                intent=new Intent(getApplicationContext(), PatientUpdateInfoActivity.class);
+                intent.putExtra("patientId", id);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
+
+
+    /**
+     * click to insert patients
+     * @param view
+     */
     public void insertPatient(View view){
         for (int i = 0; i < 20; i++) {
             int index=patientViewModel.getAllPatientsLive().getValue().size()+1+i;
@@ -70,12 +83,22 @@ public class PatientsActivity extends AppCompatActivity {
         }
     }
 
+
     /**
      * click to visit Tests activity
      * @param view
      */
     public void gotoTestsActivity(View view) {
         intent = new Intent(getApplicationContext(), TestsActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * click to visit add patient activity
+     * @param view
+     */
+    public void goToAddPatientActivity(View view) {
+        intent=new Intent(getApplicationContext(), AddPatientActivity.class);
         startActivity(intent);
     }
 }

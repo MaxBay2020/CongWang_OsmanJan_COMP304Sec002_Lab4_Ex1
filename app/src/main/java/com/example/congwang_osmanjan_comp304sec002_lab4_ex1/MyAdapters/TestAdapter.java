@@ -22,6 +22,16 @@ public class TestAdapter extends RecyclerView.Adapter<TestAdapter.TestViewHolder
         this.allTests = allTests;
     }
 
+    OnItemClickListener listener;
+
+    public interface OnItemClickListener {
+        public void onItemClick(View view, int position, String id);
+    }
+
+    public void setOnItemClick(OnItemClickListener listener){
+        this.listener=listener;
+    }
+
     @NonNull
     @Override
     public TestViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -36,6 +46,18 @@ public class TestAdapter extends RecyclerView.Adapter<TestAdapter.TestViewHolder
         holder.textView_number.setText(String.valueOf(position+1));
         holder.textView_patientFullName.setText(String.valueOf(test.getPatientId()));
         holder.textView_nurseFullName.setText(String.valueOf(test.getNurseId()));
+
+        /**
+         * click each item to go to test info activity
+         */
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(listener != null){
+                    listener.onItemClick(v,position, String.valueOf(test.getTestId()));
+                }
+            }
+        });
     }
 
     @Override

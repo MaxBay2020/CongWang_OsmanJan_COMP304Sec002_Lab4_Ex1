@@ -23,4 +23,8 @@ public interface PatientDao {
     @Query("SELECT * FROM PATIENT ORDER BY PATIENTID DESC")
     public LiveData<List<Patient>> getAllPatientsLive();
 
+    @Query("SELECT * FROM PATIENT WHERE PATIENTID=:patientId")
+    public Patient getPatientById(int patientId);
+
+
 }

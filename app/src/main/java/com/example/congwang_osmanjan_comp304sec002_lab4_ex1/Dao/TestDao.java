@@ -15,10 +15,15 @@ public interface TestDao {
     @Insert
     public void insertTest(Test... tests);
 
-    @Query("SELECT * FROM TEST WHERE PATIENTID = :patientId")
-    public Test getTestbyPatientId(int patientId);
+//    @Query("SELECT * FROM TEST WHERE PATIENTID = :patientId")
+//    public Test getTestbyPatientId(int patientId);
 
     @Query("SELECT * FROM TEST ORDER BY TESTID DESC")
     public LiveData<List<Test>> getALlTestsLive();
 
+    @Query("SELECT * FROM TEST WHERE PATIENTID=:patientId")
+    public Test getTestByPatientId(int patientId);
+
+    @Query("SELECT * FROM TEST WHERE TESTID=:testId")
+    public Test getTestById(int testId);
 }

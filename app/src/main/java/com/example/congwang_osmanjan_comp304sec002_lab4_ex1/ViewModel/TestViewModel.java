@@ -31,4 +31,12 @@ public class TestViewModel extends AndroidViewModel {
     public void insertTests(Test... tests){
         testRepository.insertTests(tests);
     }
+
+    public Test getTestByPatientId(int patientId){
+        return testRepository.getTestByPatientId(patientId);
+    }
+
+    public Test getTestById(int testId){
+        return testRepository.getTestById(testId);
+    }
 }

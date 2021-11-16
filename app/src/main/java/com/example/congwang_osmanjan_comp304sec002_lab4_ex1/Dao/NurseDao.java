@@ -19,4 +19,7 @@ public interface NurseDao {
 
     @Query("SELECT * FROM NURSE WHERE NURSEID=:nurseId AND PASSWORD=:password")
     public Nurse getNurseByNurseIdAndPassword(int nurseId, String password);
+
+    @Query("SELECT * FROM NURSE WHERE NURSEID=:nurseId")
+    public Nurse getNurseByNurseId(int nurseId);
 }

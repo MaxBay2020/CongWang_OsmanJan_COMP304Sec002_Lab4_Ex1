@@ -34,4 +34,9 @@ public class NurseRepository {
         return nurse;
     }
 
+    public Nurse getNurseByNurseId(int nurseId){
+        Nurse nurse=nurseDao.getNurseByNurseId(nurseId);
+        return nurse;
+    }
+
 }

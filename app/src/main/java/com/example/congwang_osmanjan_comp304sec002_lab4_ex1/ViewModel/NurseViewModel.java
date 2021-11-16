@@ -35,5 +35,10 @@ public class NurseViewModel extends AndroidViewModel {
         return  nurse;
     }
 
+    public Nurse getNurseByNurseId(int nurseId){
+        Nurse nurse=nurseRepository.getNurseByNurseId(nurseId);
+        return nurse;
+    }
+
 
 }

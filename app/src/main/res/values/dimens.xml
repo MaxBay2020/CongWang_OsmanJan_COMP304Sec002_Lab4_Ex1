@@ -11,4 +11,5 @@
     <dimen name="size20sp">20sp</dimen>
     <dimen name="size22sp">22sp</dimen>
     <dimen name="size24sp">24sp</dimen>
+    <dimen name="size140sp">140sp</dimen>
 </resources>

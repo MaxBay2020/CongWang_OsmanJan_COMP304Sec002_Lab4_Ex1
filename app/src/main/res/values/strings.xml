@@ -13,6 +13,24 @@
     <string name="Department">Department</string>
     <string name="Room">Room</string>
     <string name="View_Tests">View tests</string>
+    <string name="add_patient">Add your patient</string>
+    <string name="patient_firstName">Patient first name</string>
+    <string name="patient_lastName">Patient last name</string>
+    <string name="patient_department">Patient department</string>
+    <string name="nurse_id">Nurse ID</string>
+    <string name="patient_room">Patient room</string>
+    <string name="add_test">Add test</string>
+    <string name="patient_id">Patient ID</string>
+    <string name="BPH">BPH</string>
+    <string name="BPL">BPL</string>
+    <string name="temperature">Temperature</string>
+    <string name="patientFullName">Patient Fullname</string>
+    <string name="patientInfo">Patient Information</string>
+    <string name="Update">Update</string>
+    <string name="testId">Test ID</string>
+    <string name="test_info">Test Information</string>
+    <string name="back">Back</string>
+
 
     <string-array name="firstName">
         <item>Max</item>

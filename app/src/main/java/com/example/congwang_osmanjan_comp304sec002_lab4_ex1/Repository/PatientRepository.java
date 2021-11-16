@@ -29,4 +29,15 @@ public class PatientRepository {
     public void insertPatients(Patient... patients){
         patientDao.insertPatient(patients);
     }
+
+    public Patient getPatientById(int patientId){
+        Patient patient = patientDao.getPatientById(patientId);
+        return patient;
+    }
+
+    public void updatePatient(Patient... patient){
+        patientDao.updatePatient(patient);
+    }
+
+
 }

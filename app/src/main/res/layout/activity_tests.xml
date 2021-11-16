@@ -14,11 +14,11 @@
         app:layout_constraintGuide_percent="0.85" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/addTestButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Insert"
-        android:onClick="insertTest"
+        android:text="@string/add"
+        android:onClick="goToAddTestActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

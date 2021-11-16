@@ -17,13 +17,14 @@
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="goToAddPatientActivity"
         android:text="@string/add"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/viewTestsButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintEnd_toStartOf="@+id/viewTestsButton"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline7"
-        app:layout_constraintVertical_bias="0.508" />
+        app:layout_constraintTop_toTopOf="@+id/viewTestsButton" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/patient_recyclerView"
@@ -36,26 +37,14 @@
         app:layout_constraintVertical_bias="0.413" />
 
     <Button
-        android:id="@+id/insertButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="insertPatient"
-        android:text="Insert"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.222"
-        app:layout_constraintStart_toEndOf="@+id/addButton"
-        app:layout_constraintTop_toTopOf="@+id/guideline7"
-        app:layout_constraintVertical_bias="0.508" />
-
-    <Button
         android:id="@+id/viewTestsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/View_Tests"
         android:onClick="gotoTestsActivity"
+        android:text="@string/View_Tests"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toEndOf="@+id/insertButton"
-        app:layout_constraintTop_toTopOf="@+id/insertButton" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/addButton"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
 </androidx.constraintlayout.widget.ConstraintLayout>

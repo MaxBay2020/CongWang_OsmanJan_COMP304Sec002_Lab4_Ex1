@@ -28,4 +28,12 @@ public class TestRepository {
     public void insertTests(Test... tests){
         testDao.insertTest(tests);
     }
+
+    public Test getTestByPatientId(int patientId){
+        return testDao.getTestByPatientId(patientId);
+    }
+
+    public Test getTestById(int testId){
+        return testDao.getTestById(testId);
+    }
 }

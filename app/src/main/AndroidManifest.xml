@@ -10,17 +10,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CongWang_OsmanJan_COMP304Sec002_Lab4_Ex1">
         <activity
+            android:name=".ViewTestInfoActivity"
+            android:exported="false"
+            android:label="Test info"
+            android:parentActivityName=".TestsActivity"
+            />
+        <activity
+            android:name=".PatientUpdateInfoActivity"
+            android:exported="false"
+            android:label="Patient Info"
+            android:parentActivityName=".PatientsActivity"
+            />
+        <activity
+            android:name=".AddTestActivity"
+            android:exported="false"
+            android:label="Add Test"
+            android:parentActivityName=".TestsActivity" />
+        <activity
+            android:name=".AddPatientActivity"
+            android:exported="false"
+            android:label="Add patient"
+            android:parentActivityName=".PatientsActivity" />
+        <activity
             android:name=".TestsActivity"
             android:exported="false"
             android:label="Patients Tests"
-            android:parentActivityName=".PatientsActivity"
-            />
+            android:parentActivityName=".PatientsActivity" />
         <activity
             android:name=".PatientsActivity"
             android:exported="false"
             android:label="My Patients"
-            android:parentActivityName=".MainActivity"
-            />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".LoginActivity"
             android:exported="false"
